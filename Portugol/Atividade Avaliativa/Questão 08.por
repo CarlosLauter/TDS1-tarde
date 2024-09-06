@@ -4,6 +4,7 @@ programa
 	funcao inicio()
 	{
 		inteiro quant_alco = 0 , quant_gaso = 0, quant_die = 0, opcao
+		//opa :D
 
 		escreva("Por favor nos ajude na nossa pesquisa de satisfação :D")
 		escreva("\n")
@@ -23,7 +24,7 @@ programa
 		}
 		
 		enquanto (opcao < 1 ou opcao > 4){
-			escreva("Número inválido, favor digitar um número de 1 á 4")
+			escreva("Número inválido, favor digitar um número de 1 á 4: ")
 			leia(opcao)
 		}
 		enquanto (opcao != 4){
@@ -52,7 +53,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 494; 
+ * @POSICAO-CURSOR = 606; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
