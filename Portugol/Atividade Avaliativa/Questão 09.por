@@ -3,18 +3,15 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro senha = 2002
+		inteiro x, i, resultado
 		//opa :D
 
-		escreva("Digite a senha: ")
-		leia(senha)
+		escreva("Digite o valor que deseja ver a tabuada: ")
+		leia(x)
 
-		enquanto (senha != 2002){
-			escreva("Senha inválida, digite novamente: ")
-			leia(senha) 
-		}
-		se (senha == 2002){
-			escreva("\nAcesso permitido")
+		para (i = 1; i < 11; i++){
+			resultado = x * i
+			escreva(x, " X ", i, " = ", resultado, "\n")
 		}
 	}
 }
@@ -23,7 +20,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 66; 
+ * @POSICAO-CURSOR = 74; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
