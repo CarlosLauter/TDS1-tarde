@@ -16,6 +16,7 @@ programa
 		real valor1, valor2, reajuste, valorTotal
 		cadeia tipo
 		inteiro confirma
+		//opa :D
 		escreva("Digite o valor atual da gasolina: ")
 		leia(valor1)
 		escreva("Digite o valor atual do etanol: ")
@@ -44,7 +45,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1028; 
+ * @POSICAO-CURSOR = 397; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

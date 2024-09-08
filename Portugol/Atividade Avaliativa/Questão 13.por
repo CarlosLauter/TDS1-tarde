@@ -6,6 +6,7 @@ programa
 	{
 		inteiro n, i
 		real N[10], media, soma = 0.0
+		//opa :D
 
 		escreva("Quantos elementos vai ter o vetor? ")
 		leia(n)
@@ -32,7 +33,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 520; 
+ * @POSICAO-CURSOR = 126; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

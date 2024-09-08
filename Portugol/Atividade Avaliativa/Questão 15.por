@@ -3,29 +3,24 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro n, i, cont = 0, N[10]
-		//opa:D
-		
-		
-		escreva("Quantos números você gostaria de analisar: ")
+		inteiro n, soma = 0, N[10][10], i, j
+		//opa :D
+
+		escreva("Digite o tamanho da matriz: ")
 		leia(n)
 
 		para (i = 0; i < n; i++){
-			escreva("Escreva o ", i+1, "º número: ")
-			leia(N[i])
-			
+			para (j = 0; j < n; j++){
+				escreva("Digite o número de [", i, ",", j, "]: ")
+				leia(N[i][j])
+			}
 		}
-		escreva("Números pares: ")
-		
 		para (i = 0; i < n; i++){
-			se (N[i] % 2 != 0){
-			}
-			senao{
-				cont = cont + 1
-				escreva(N[i], " ")
+			para (j = i+1; j < n; j++){
+				soma = soma + N[i][j]
 			}
 		}
-		escreva("\nQuantidade de números pares: ", cont)
+		escreva("A soma dos elementos acima da matriz é: ", soma)
 		
 	}
 }
@@ -34,9 +29,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 77; 
+ * @POSICAO-CURSOR = 443; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {N, 6, 23, 1};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
