@@ -20,7 +20,7 @@ programa
 				soma = soma + N[i][j]
 			}
 		}
-		escreva("A soma dos elementos acima da matriz é: ", soma)
+		escreva("A soma dos elementos acima da diagonal principal da matriz é: ", soma)
 		
 	}
 }
@@ -29,7 +29,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 443; 
+ * @POSICAO-CURSOR = 428; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {N, 6, 23, 1};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
