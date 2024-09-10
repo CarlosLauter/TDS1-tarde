@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-//Base do retangulo: 4.0
-//Altura do retangulo: 5.0
-//AREA = 20.0000
-//PERIMETRO = 18.0000
-//DIAGONAL = 6.4031
-
 int main (){
 
     float base, altura, area, perimetro, diagonal;
