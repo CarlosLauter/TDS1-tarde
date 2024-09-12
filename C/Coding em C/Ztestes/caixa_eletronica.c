@@ -2,13 +2,31 @@
 #include <stdlib.h>
 
 const int nr_agencia = 1020, nr_conta = 123, nr_senha = 1234;
-float saldo = 0.0, limite = 500.00;
+float saldo = 0.0, limite = 500.00, total;
 float operacao_credito [100], operacao_debito [100]; 
+int total_credito = 0, total_debito = 0;
+
+void consulta_extrato (){
+    int i;
+    printf("Extrato Bancario Completo:\n\n");
+    printf("Operacoes feitas com credito: \n");
+    for (i = 0; i < total_credito; i++){
+        printf("Deposito: R$ %.2f\n", operacao_credito[i]);
+    }
+
+    printf("\nOperacoes de debito: \n");
+    for (i = 0; i < total_debito; i++){
+        printf("Saque: R$ %.2f\n", operacao_debito[i]);
+    }
+
+    printf("\nSaldo final: %.2f\n", total);
+}
+
 
 void consulta_saldo (){
     printf("Saldo:              R$ %.2f", saldo);
     printf("\nLimite:           R$ %.2f", limite);
-    printf("\nDisponivel:       R$ %.2f", saldo + limite);
+    printf("\nDisponivel:       R$ %.2f", total = saldo + limite);
 }
 
 void realizar_deposito (float *saldo){
@@ -16,18 +34,45 @@ void realizar_deposito (float *saldo){
     printf("Entre com o valor que gostaria de depositar: ");
     scanf("%f", &num);
     *saldo = *saldo + num;
+    
+    if (total_credito < 100){
+        
+        operacao_credito[total_credito++] = + num;
+    }
+    else {
+        printf("Credito cheio");
+    }
+    
 }
 
-void realizar_saque(float *saldo){
+void realizar_saque(float *saldo, float *limite){
     float num;
+    total = *saldo + *limite;
     printf("Digite o valor que gostaria de sacar: ");
     scanf("%f", &num);
+    
+    if (total_debito < 100){
 
-   if (num > *saldo){
-    printf("Valor acima do saldo");
-   }
+        operacao_debito[total_debito++] = - num;
+    } 
+    else {
+        printf("Debito cheio");
+    }
 
-    *saldo = *saldo - num;
+    if (total < num){
+        printf("Numero acima do valor total");
+    }
+    else if (num > *saldo && (*saldo -num) < *limite){
+        *limite = (*saldo - num) + *limite ;
+        *saldo = (*saldo - num);
+        if (*saldo < 0) {
+            *saldo = 0;
+        }
+    }
+    else {
+        *saldo = *saldo - num;
+    }  
+
 }
 
 void preenche_vetor (){
@@ -41,7 +86,6 @@ void chama_menu (){
     int opcao;
 
     do {
-
         printf("\nEscolha uma opcao: ");
         printf("\n1 - Saldo\n2 - Extrato\n3 - Saque\n4 - Deposito\n5 - Sair\n Opcao: ");
         scanf("%d", &opcao);
@@ -56,10 +100,11 @@ void chama_menu (){
         chama_menu();
         break;
     case 2:
-        //consulta_extrato ();
+        consulta_extrato ();
+        chama_menu();
         break;
     case 3:
-        realizar_saque (&saldo);
+        realizar_saque (&saldo, &limite);
         chama_menu();
         break;
     case 4:
