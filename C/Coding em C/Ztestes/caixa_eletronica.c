@@ -4,18 +4,18 @@
 const int nr_agencia = 1020, nr_conta = 123, nr_senha = 1234;
 float saldo = 0.0, limite = 500.00, total;
 float operacao_credito [100], operacao_debito [100]; 
-int total_credito = 0, total_debito = 0;
+int cont1 = 0, cont2 = 0;
 
 void consulta_extrato (){
     int i;
     printf("Extrato Bancario Completo:\n\n");
     printf("Operacoes feitas com credito: \n");
-    for (i = 0; i < total_credito; i++){
+    for (i = 0; i < cont1; i++){
         printf("Deposito: R$ %.2f\n", operacao_credito[i]);
     }
 
     printf("\nOperacoes de debito: \n");
-    for (i = 0; i < total_debito; i++){
+    for (i = 0; i < cont2; i++){
         printf("Saque: R$ %.2f\n", operacao_debito[i]);
     }
 
@@ -35,9 +35,9 @@ void realizar_deposito (float *saldo){
     scanf("%f", &num);
     *saldo = *saldo + num;
     
-    if (total_credito < 100){
+    if (cont1 < 100){
         
-        operacao_credito[total_credito++] = + num;
+        operacao_credito[cont1++] = + num;
     }
     else {
         printf("Credito cheio");
@@ -51,9 +51,9 @@ void realizar_saque(float *saldo, float *limite){
     printf("Digite o valor que gostaria de sacar: ");
     scanf("%f", &num);
     
-    if (total_debito < 100){
+    if (cont2 < 100){
 
-        operacao_debito[total_debito++] = - num;
+        operacao_debito[cont2++] = - num;
     } 
     else {
         printf("Debito cheio");
