@@ -7,7 +7,7 @@ float operacao_credito [100], operacao_debito [100];
 int cont1 = 0, cont2 = 0;
 
 void consulta_extrato (){
-    int i;
+    int i, rep;
     printf("Extrato Bancario Completo:\n\n");
     printf("Operacoes feitas com credito: \n");
     for (i = 0; i < cont1; i++){
@@ -20,13 +20,28 @@ void consulta_extrato (){
     }
 
     printf("\nSaldo final: %.2f\n", total);
+     do{
+        printf("\n");
+        printf("\nPara voltar para o menu, digite 5: ");
+        scanf("%d", &rep);
+        system("cls");
+        chama_menu();
+    }while (rep != 5);
 }
 
 
 void consulta_saldo (){
+    int rep;
     printf("Saldo:              R$ %.2f", saldo);
     printf("\nLimite:           R$ %.2f", limite);
     printf("\nDisponivel:       R$ %.2f", total = saldo + limite);
+    do{
+        printf("\n");
+        printf("\nPara voltar para o menu, digite 5: ");
+        scanf("%d", &rep);
+        system("cls");
+        chama_menu();
+    }while (rep != 5);
 }
 
 void realizar_deposito (float *saldo){
@@ -97,11 +112,9 @@ void chama_menu (){
     case 1:
         consulta_saldo ();
         printf("\n\n");
-        chama_menu();
         break;
     case 2:
         consulta_extrato ();
-        chama_menu();
         break;
     case 3:
         realizar_saque (&saldo, &limite);
