@@ -5,7 +5,7 @@ public class main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Random random = new Random(10);
+        Random random = new Random();
 
         int num1 = 0, num2 = 0, opcao = 0, resultado = 0, total = 0, confirma = 0;
 
