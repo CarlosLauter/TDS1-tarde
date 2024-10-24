@@ -1,4 +1,4 @@
-public class Main {
+public class teste_carro {
     public static void main(String[] args) {
         Pessoa pessoa1 = new Pessoa();
         Carro carro1 = new Carro();
